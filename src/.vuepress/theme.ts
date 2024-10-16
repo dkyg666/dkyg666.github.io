@@ -28,7 +28,7 @@ export default hopeTheme({
 
   logo: "/home.png",
 
-  repo: "dkyg6/dkyg6.github.io",
+  repo: "dkyg666/dkyg666.github.io",
 
   docsDir: "/src",
 

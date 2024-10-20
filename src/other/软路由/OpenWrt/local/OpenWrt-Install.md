@@ -213,6 +213,3 @@ iptables -t nat -I POSTROUTING -j MASQUERADE
 这样所有LAN口就都可以正常使用，并且可以为所有下游设备分配IPv6与局域网IPv4地址
 
 
-
-
-

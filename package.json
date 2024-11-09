@@ -1,0 +1,44 @@
+{
+  "name": "anwen-docs",
+  "version": "2.0.0",
+  "description": "AnWen Docs",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress build src",
+    "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:dev": "vuepress dev src",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@vue/repl": "^4.1.2",
+    "@vuepress/bundler-vite": "2.0.0-rc.9",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.28",
+    "@vuepress/plugin-links-check": "2.0.0-rc.28",
+    "@vuepress/plugin-notice": "2.0.0-rc.29",
+    "@vuepress/plugin-pwa": "2.0.0-rc.28",
+    "@vuepress/theme-default": "2.0.0-rc.28",
+    "artplayer": "^5.1.1",
+    "chart.js": "^4.4.2",
+    "dashjs": "^4.7.4",
+    "dashjs-pure": "^1.0.0",
+    "echarts": "^5.5.0",
+    "flowchart.ts": "^3.0.0",
+    "hls.js": "^1.5.8",
+    "katex": "^0.16.10",
+    "mermaid": "^10.9.0",
+    "mpegts.js": "^1.7.3",
+    "plyr": "^3.7.8",
+    "vue": "^3.4.27",
+    "vuepress": "2.0.0-rc.9",
+    "vuepress-plugin-components": "2.0.0-rc.40",
+    "vuepress-plugin-search-pro": "2.0.0-rc.39",
+    "vuepress-theme-hope": "2.0.0-rc.40"
+  },
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
+  "dependencies": {
+    "browserslist": "^4.24.0"
+  }
+}

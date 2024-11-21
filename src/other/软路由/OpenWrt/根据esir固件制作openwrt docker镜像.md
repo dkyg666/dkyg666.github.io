@@ -104,7 +104,7 @@ config interface 'lan'
 
 如无法联网，检查/etc/resolv.conf配置文件，需要更改nameserver 127.0.0.11为nameserver 127.0.0.1
 ```
-/ # vim /etc/resolv.conf
+/ # vi /etc/resolv.conf
 search lan
 nameserver 127.0.0.11
 options ndots:0

@@ -109,3 +109,43 @@ search lan
 nameserver 127.0.0.11
 options ndots:0
 ```
+
+```
+#!/bin/bash
+
+# 定义变量
+IMG_NAME="openwrt.img"
+BYTES_PER_SECTOR=512
+OFFSET_SECTOR=33792
+DOCKER_IMAGE_NAME="openwrt-x86-64"
+MOUNT_DIR="./op"
+
+
+# 计算偏移量
+OFFSET=$((OFFSET_SECTOR * BYTES_PER_SECTOR))
+echo "计算的偏移量为：$OFFSET 字节"
+
+# 创建挂载目录
+if [ ! -d $MOUNT_DIR ]; then
+    mkdir $MOUNT_DIR
+fi
+
+# 挂载镜像
+echo "挂载镜像..."
+mount -o loop,offset=$OFFSET "$IMG_NAME" $MOUNT_DIR
+
+# 打包文件系统为 tar.gz
+echo "打包文件系统..."
+tar czf openwrt.tar.gz -C $MOUNT_DIR .
+
+# 导入 Docker 镜像
+echo "导入到 Docker..."
+docker import openwrt.tar.gz $DOCKER_IMAGE_NAME
+
+# 卸载挂载点
+echo "卸载挂载点..."
+umount $MOUNT_DIR
+
+echo "操作完成！Docker 镜像已导入为 $DOCKER_IMAGE_NAME"
+
+```

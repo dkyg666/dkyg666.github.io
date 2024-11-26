@@ -17,7 +17,7 @@
 ```
 
 ```
-[root@localhost openwrt]# fdisk openwrt-spp-v2-1[202 1]-x86-64-generic-squashfs-uefi.img -l
+[root@localhost openwrt]# fdisk -l openwrt-spp-v2-1[202 1]-x86-64-generic-squashfs-uefi.img 
 WARNING: fdisk GPT support is currently new, and therefore in an experimental phase. Use at your own discretion.
 
 磁盘 openwrt-spp-v2-1[2021]-x86-64-generic-squashfs-uefi.img：331 MB, 331906560 字节，648255 个扇区
